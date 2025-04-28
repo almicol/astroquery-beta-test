@@ -99,6 +99,15 @@ although the structure of your code won’t need to change, <strong>the values y
 See section <a class="reference internal" href="#column-filters-fix"><span class="std std-ref">Using the correct column_filters</span></a></p>
 </div>
 <section id="getting-started">
+	<h2>Terminology</h2>h2>
+	<p>When speaking about data within the ESO Science Archive Facility, we use the following terms:
+	<ul>
+		<li><strong>raw data</strong>: data as acquired by the instrument, in FITS format (at times compressed)</li>
+		<li><strong>data products</strong>: processed data, i.e., data with the instrumental signature removed, aka reduced data, with the data at least partially calibrated (e.g., in wavelength, in flux, etc.), in FITS format (at times compressed)</li>
+		<li><strong>scientific file</strong>: a data product is composed of one scientific file, and potentially of multiple (0-to-N) ancillary files</li>
+		<li><strong>ancillary file</strong>: a file that add information to the scientific file; it could be a weight map, a 2d spectrum, a white image of a cube, a preview, etc. 
+		<li><strong>metadata</strong>: information describing the data at hand, like the pointing and/or target coordinates, the spectral resolution, the spectral/spatial/time coverage, the expoure time, the sginal-to-noise ratio, the limiting magnitude, the instrument set up, the observing programme, the proprietary period, etcetera. Usually originating from the header keywords provided within the FITS file, this information is useful when constraining the search for data of a certain kind.</li>
+	</ul></p>
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h2>
 <p>This is a python interface for querying the ESO archive web service.
 For now, it supports the following:</p>
